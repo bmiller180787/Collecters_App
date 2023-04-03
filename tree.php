@@ -1,6 +1,6 @@
 <?php
 
-class tree
+class Tree
 {
     private string $name;
 
@@ -105,6 +105,23 @@ class tree
     private string $leaf_colour;
     private string $flower_colour;
     private string $image;
+    private string $id;
+
+    /**
+     * @param string $image
+     */
+    public function setImage(string $image): void
+    {
+        $this->image = $image;
+    }
+
+    /**
+     * @param string $id
+     */
+    public function setId(string $id): void
+    {
+        $this->id = $id;
+    }
 
     public function __construct(
         string $name,
@@ -112,7 +129,8 @@ class tree
         string $leaf_type,
         string $leaf_colour,
         string $flower_colour,
-        string $image
+        string $image,
+        int $id = -1
     ){
         $this->name = $name;
         $this->scientific_name = $scientific_name;
@@ -120,6 +138,7 @@ class tree
         $this->leaf_colour = $leaf_colour;
         $this->flower_colour = $flower_colour;
         $this->image = $image;
+        $this->id = $id;
     }
 
 }

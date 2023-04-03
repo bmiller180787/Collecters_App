@@ -3,7 +3,7 @@
 require_once 'tree.php';
 require_once 'dbconnect.php';
 
-class treedbconnect
+class TreeDBConnect
 {
     private PDO $dbase;
 
@@ -15,7 +15,8 @@ class treedbconnect
     public function fetchAll(): array
     {
         $sqlstatement = 'SELECT `name`,`scientific_name`
-        ,`leaf_type`.`leaf_type`,`leaf_colour`.`colour`,`flower_colour`.`colour` AS "FlowerColour",`image`
+        ,`leaf_type`.`leaf_type`,`leaf_colour`.`colour`
+        ,`flower_colour`.`colour` AS "FlowerColour",`image`
         FROM `trees`
         INNER JOIN `leaf_colour`
         ON `trees`.`leaf_colour` = `leaf_colour`.`id`
