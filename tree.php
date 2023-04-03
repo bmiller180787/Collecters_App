@@ -89,21 +89,21 @@ class tree
      */
     public function getImageLink(): string
     {
-        return $this->image_link;
+        return $this->image;
     }
 
     /**
-     * @param string $image_link
+     * @param string $image
      */
-    public function setImageLink(string $image_link): void
+    public function setImageLink(string $image): void
     {
-        $this->image_link = $image_link;
+        $this->image = $image;
     }
     private string $scientific_name;
     private string $leaf_type;
     private string $leaf_colour;
     private string $flower_colour;
-    private string $image_link;
+    private string $image;
 
     public function __construct(
         string $name,
@@ -111,15 +111,14 @@ class tree
         string $leaf_type,
         string $leaf_colour,
         string $flower_colour,
-        string $image_link
+        string $image
     ){
         $this->name = $name;
         $this->scientific_name = $scientific_name;
         $this->leaf_type = $leaf_type;
         $this->leaf_colour = $leaf_colour;
         $this->flower_colour = $flower_colour;
-        $this->image_link = $image_link;
+        $this->image = $image;
     }
-
 
 }
