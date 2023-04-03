@@ -99,6 +99,7 @@ class tree
     {
         $this->image = $image;
     }
+    
     private string $scientific_name;
     private string $leaf_type;
     private string $leaf_colour;
