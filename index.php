@@ -35,17 +35,18 @@ $trees = $dbase->fetchAll();
     <?php
     $htmlbody = '';
         foreach($trees as $tree){
-            $htmlbody .= '<card class="cards">'
+            $htmlbody .= '<div class="card">'
             . '<div><img src="' . $tree->getImageLink() . '" alt="A ' . $tree->getName() . '"></div>'
             . '<h2>' . $tree->getName() . '</h2>'
             . '<p>' . $tree->getScientificName() . '</p>'
-            . '</card>'
+            . '</div>'
             ;
         }
 
         echo $htmlbody;
 
     ?>
+    </section>
 
 </body>
 
