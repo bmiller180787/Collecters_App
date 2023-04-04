@@ -4,5 +4,38 @@
 
 img {
     width: 100%;
-    height: auto;
+    height: 50%;
+}
+
+body {
+    background-color: #ccffdd;
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 1rem;
+}
+
+.trees {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    align-items: center;
+    margin: auto;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #00b33c;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+@media only screen and (min-width: 700px) {
+    .trees {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5%;
+    }
 }

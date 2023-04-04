@@ -36,7 +36,7 @@ $trees = $dbase->fetchAll();
     $htmlbody = '';
         foreach($trees as $tree){
             $htmlbody .= '<card class="cards">'
-            . '<p><img src="' . $tree->getImageLink() . '"></p>'
+            . '<div><img src="' . $tree->getImageLink() . '"></div>'
             . '<h2>' . $tree->getName() . '</h2>'
             . '<p>' . $tree->getScientificName() . '</p>'
             . '</card>'
