@@ -3,6 +3,7 @@
 require_once 'dbconnect.php';
 require_once 'treedbconnect.php';
 require_once 'tree.php';
+require_once 'functions.php';
 
 $dbase = new TreeDBConnect();
 $trees = $dbase->fetchAll();
@@ -32,20 +33,13 @@ $trees = $dbase->fetchAll();
         <p>My collection so far</p>
 
     <section class="trees">
-    <?php
-    $htmlbody = '';
-        foreach($trees as $tree){
-            $htmlbody .= '<div class="card">'
-            . '<div><img src="' . $tree->getImageLink() . '" alt="A ' . $tree->getName() . '"></div>'
-            . '<h2>' . $tree->getName() . '</h2>'
-            . '<p>' . $tree->getScientificName() . '</p>'
-            . '</div>'
-            ;
-        }
 
-        echo $htmlbody;
+    <?php
+
+    echo returnHtmlFromArray();
 
     ?>
+
     </section>
 
 </body>
