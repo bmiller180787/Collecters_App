@@ -29,7 +29,7 @@ h1, h2 {
 .cards {
     display: flex;
     flex-direction: column;
-    border: 2px solid #00b33c;
+    border: 0.1rem solid #00b33c;
     justify-content: space-around;
     flex-grow: 1;
 }
