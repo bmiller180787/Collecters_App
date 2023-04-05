@@ -25,12 +25,12 @@ if ($name === '' || $scientific_name
     <a href="addnewtree.php"><button class="button" type="button">Return to Form </button></a>';
     exit();
 }
-$newTree = new Tree($name
-    ,$scientific_name
-    ,$leaf_type
-    ,$leaf_colour
-    ,$flower_colour
-    ,$image);
+$newTree = new Tree($name,
+    $scientific_name,
+    $leaf_type,
+    $leaf_colour,
+    $flower_colour,
+    $image);
 
 $tree->addNewTree($newTree);
 
