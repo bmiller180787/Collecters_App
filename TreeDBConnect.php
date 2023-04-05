@@ -1,6 +1,6 @@
 <?php
 
-require_once 'tree.php';
+require_once 'Tree.php';
 require_once 'dbconnect.php';
 
 class TreeDBConnect
@@ -31,12 +31,12 @@ class TreeDBConnect
 
         $trees = [];
         foreach ($entries as $entry) {
-            $tree = new tree($entry['name']
-                , $entry['scientific_name']
-                , $entry['leaf_type']
-                , $entry['colour']
-                , $entry['FlowerColour']
-                , $entry['image']);
+            $tree = new tree($entry['name'],
+                $entry['scientific_name'],
+                $entry['leaf_type'],
+                $entry['colour'],
+                $entry['FlowerColour'],
+                $entry['image']);
             $trees[] = $tree;
         }
 
@@ -62,15 +62,36 @@ class TreeDBConnect
 
         $trees = [];
         foreach ($entries as $entry) {
-            $tree = new tree($entry['name']
-                , $entry['scientific_name']
-                , $entry['leaf_type']
-                , $entry['colour']
-                , $entry['FlowerColour']
-                , $entry['image']);
+            $tree = new tree($entry['name'],
+                $entry['scientific_name'],
+                $entry['leaf_type'],
+                $entry['colour'],
+                $entry['FlowerColour'],
+                $entry['image']);
             $trees[] = $tree;
         }
 
         return $trees;
+    }
+
+    public function addNewTree(Tree $newTree): void
+    {
+        $sqlstatement = 'INSERT INTO `trees` (`name`
+        ,`scientific_name`
+        ,`leaf_type`
+        ,`leaf_colour`
+        ,`flower_colour`
+        ,`image`)
+        VALUES (:name,:scientific_name,:leaf_type,:leaf_colour,:flower_colour,:image);';
+
+        $values = ['name' => $newTree->getName()
+            , 'scientific_name' => $newTree->getScientificName()
+            , 'leaf_type' => $newTree->getLeafType()
+            , 'leaf_colour' => $newTree->getLeafColour()
+            , 'flower_colour' => $newTree->getFlowerColour()
+            , 'image' => $newTree->getImageLink()];
+
+        $query = $this->dbase->prepare($sqlstatement);
+        $query->execute($values);
     }
 }
