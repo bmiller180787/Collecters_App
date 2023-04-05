@@ -26,7 +26,7 @@ require_once 'head.html';
         <p>Common Name <input type="text" name="name" required></p>
         <p>Scientific Name <input type="text" name="scientific_name" required></p>
         <label for="leaftype">Leaf Type</label>
-        <select id="leaftype" name="leaf_type">
+        <select id="leaftype" name="leaf_type" required>
         <?php
             foreach ($leafTypes as $leafType){
                 echo '<option value="' . $leafType['id'] . '">' . $leafType['leaf_type'] . '</option>';
@@ -34,7 +34,7 @@ require_once 'head.html';
         ?>
         </select>
         <label for="leafcolour">Leaf Colour</label>
-        <select id="leafcolour" name="leaf_colour">
+        <select id="leafcolour" name="leaf_colour" required>
             <?php
             foreach ($leafColours as $leafColour){
                 echo '<option value="' . $leafColour['id'] . '">' . $leafColour['colour'] . '</option>';
@@ -42,14 +42,14 @@ require_once 'head.html';
             ?>
         </select>
         <label for="flowercolour">Flower Colour</label>
-        <select id="flowercolour" name="flower_colour">
+        <select id="flowercolour" name="flower_colour" required>
             <?php
             foreach ($flowerColours as $flowerColour){
                 echo '<option value="' . $flowerColour['id'] . '">' . $flowerColour['FlowerColour'] . '</option>';
             }
             ?>
         </select>
-        <p>Image Link <input type="text" name="image"></p>
+        <p>Image Link <input type="text" name="image" required></p>
         <button type="submit">Submit</button><br>
     </form>
 
