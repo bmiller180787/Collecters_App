@@ -1,7 +1,7 @@
 <?php
 
 require_once '../functions.php';
-require_once '../tree.php';
+require_once '../Tree.php';
 
 use PHPUnit\Framework\TestCase;
 
