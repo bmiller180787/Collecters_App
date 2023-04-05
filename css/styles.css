@@ -8,12 +8,20 @@ img {
 }
 
 body {
+    background-image: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url("../images/background.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
     background-color: #ccffdd;
     text-align: center;
 }
 
 h1, h2 {
     margin: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+p, label{
+    font-family: 'PT Serif', serif;
 }
 
 .trees {
@@ -25,19 +33,12 @@ h1, h2 {
     margin: auto;
 }
 
-.card {
+.card, .newtreeform {
     display: flex;
     flex-direction: column;
+    background-color: #ccffdd;
     border: 0.1rem solid #00b33c;
-    justify-content: space-between;
-    flex-grow: 1;
-}
-
-.newtreeform {
-    position: center;
-    display: grid;
-    border: 0.1rem solid #00b33c;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .addtreebutton {
