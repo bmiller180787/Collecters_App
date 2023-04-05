@@ -94,5 +94,4 @@ class TreeDBConnect
         $query = $this->dbase->prepare($sqlstatement);
         $query->execute($values);
     }
-
 }
