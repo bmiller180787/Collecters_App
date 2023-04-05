@@ -31,12 +31,12 @@ class TreeDBConnect
 
         $trees = [];
         foreach ($entries as $entry) {
-            $tree = new tree($entry['name']
-                , $entry['scientific_name']
-                , $entry['leaf_type']
-                , $entry['colour']
-                , $entry['FlowerColour']
-                , $entry['image']);
+            $tree = new tree($entry['name'],
+                $entry['scientific_name'],
+                $entry['leaf_type'],
+                $entry['colour'],
+                $entry['FlowerColour'],
+                $entry['image']);
             $trees[] = $tree;
         }
 
@@ -62,12 +62,12 @@ class TreeDBConnect
 
         $trees = [];
         foreach ($entries as $entry) {
-            $tree = new tree($entry['name']
-                , $entry['scientific_name']
-                , $entry['leaf_type']
-                , $entry['colour']
-                , $entry['FlowerColour']
-                , $entry['image']);
+            $tree = new tree($entry['name'],
+                $entry['scientific_name'],
+                $entry['leaf_type'],
+                $entry['colour'],
+                $entry['FlowerColour'],
+                $entry['image']);
             $trees[] = $tree;
         }
 

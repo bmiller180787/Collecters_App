@@ -23,8 +23,8 @@ require_once 'head.html';
 
     <h1>Add new Tree</h1>
     <form class="newtreeform" method="post" action="addcomplete.php">
-        <p>Common Name <input type="text" name="name" required></p>
-        <p>Scientific Name <input type="text" name="scientific_name" required></p>
+        <label>Common Name <input type="text" name="name" required></label>
+        <label>Scientific Name <input type="text" name="scientific_name" required></label>
         <label for="leaftype">Leaf Type</label>
         <select id="leaftype" name="leaf_type" required>
         <?php
@@ -49,7 +49,7 @@ require_once 'head.html';
             }
             ?>
         </select>
-        <p>Image Link <input type="text" name="image" required></p>
+        <label>Image Link <input type="text" name="image" required></label>
         <button type="submit">Submit</button><br>
     </form>
 
